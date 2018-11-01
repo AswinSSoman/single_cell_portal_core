@@ -136,16 +136,18 @@
     organism: ideogramInferCnvSettings.organism.toLowerCase(),
     assembly: ideogramInferCnvSettings.assembly,
     chrHeight: 400,
-    dataDir: 'https://unpkg.com/ideogram@1.1.1/dist/data/bands/native/',
-    annotationsPath: ideogramInferCnvSettings.annotationsPath,
+    dataDir: 'https://unpkg.com/ideogram@1.3.0/dist/data/bands/native/',
+    // annotationsPath: ideogramInferCnvSettings.annotationsPath,
+    annotationsPath: '/single_cell/example_data/tailored__infercnv_exp_means.json',
     annotationTracks: annotationTracks,
-    // annotationsLayout: 'heatmap',
+    annotationsLayout: 'heatmap',
     heatmaps: [
-      {key: 'all', thresholds: heatmapThresholds},
-      {key: 'Cluster 1', thresholds: heatmapThresholds},
-      {key: 'Cluster 2', thresholds: heatmapThresholds}
+      {key: 'SS1', thresholds: heatmapThresholds},
+      {key: 'SS2', thresholds: heatmapThresholds},
+      {key: 'SS7', thresholds: heatmapThresholds}
     ],
-    debug: true
+    debug: true,
+    rotatable: false
   });
 
 
