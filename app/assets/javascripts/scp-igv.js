@@ -160,7 +160,9 @@ function initializeIgv() {
 }
 
 $(document).on('click', '#genome-tab-nav > a', function(event) {
-  initializeIgv();
+  if (typeof bamAndBaiFiles !== 'undefined') {
+    initializeIgv();
+  }
 });
 
 $(document).ready(function() {
